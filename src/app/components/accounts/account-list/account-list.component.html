@@ -1,0 +1,21 @@
+<mat-card>
+  <mat-accordion>
+    <mat-expansion-panel *ngFor="let account of accounts">
+      <mat-expansion-panel-header>
+          <h3>{{account._id}}</h3>
+      </mat-expansion-panel-header>
+      <p>Amount: {{account.amount}}</p>
+      <p>Debit Account: {{account.debit_account}}</p>
+      <p>Credit Account: {{account.credit_account}}</p>
+      <p>Start Time: {{account.start_time}}</p>
+      <p>End Time: {{account.end_time}}</p>
+      <p>Sequence: {{account.sequence}}</p>
+      <p>Type: {{account.type}}</p>
+
+      <mat-action-row>
+          <button mat-button color="warn" (click)="edit(account._id)">Edit</button>
+          <button mat-button color="primary" (click)="delete(account._id)">Delete</button>
+      </mat-action-row>
+    </mat-expansion-panel>
+  </mat-accordion>
+</mat-card>

@@ -1,0 +1,48 @@
+<div class='example-container'>
+  <mat-card>
+    <form (submit)="addAccount($event)">
+
+      <mat-form-field>
+        <input matInput placeholder="Amount" [(ngModel)]="amount" name="amount">
+      </mat-form-field>
+      <br>
+      <mat-form-field>
+        <input matInput placeholder="Debit Account" [(ngModel)]="debit_account" name="debit_account">
+      </mat-form-field>
+      <br>
+      <mat-form-field>
+        <input matInput placeholder="Credit Account" [(ngModel)]="credit_account" name="credit_account">
+      </mat-form-field>
+      <br>
+      <mat-form-field>
+        <input matInput placeholder="Start Time" [(ngModel)]="start_time" name="start_time">
+      </mat-form-field>
+      <br>
+      <mat-form-field>
+        <input matInput placeholder="End Time" [(ngModel)]="end_time" name="end_time">
+      </mat-form-field>
+      <br>
+      <mat-form-field>
+        <input matInput placeholder="Sequence" [(ngModel)]="sequence" name="sequence">
+      </mat-form-field>
+      <br>
+      <mat-form-field>
+        <input matInput placeholder="Type" [(ngModel)]="type" name="type">
+      </mat-form-field>
+      <br>
+
+      <!-- <mat-form-field>
+        <mat-select placeholder="Type">
+          <mat-option value="m">Month</mat-option>
+          <mat-option value="w">Week</mat-option>
+          <mat-option value="h">Hour</mat-option>
+          <mat-option value="m">Minute</mat-option>
+          <mat-option value="s">Second</mat-option>
+        </mat-select>
+      </mat-form-field>
+      <br> -->
+      <button mat-raised-button type="submit">Add</button>
+    </form>
+  </mat-card>
+</div>
+

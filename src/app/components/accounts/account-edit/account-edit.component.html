@@ -1,0 +1,43 @@
+
+<form (submit)="editAccount($event)">
+  <h2 mat-dialog-title>Edit Account</h2>
+  <mat-dialog-content class="mat-typography">
+    <mat-form-field>
+      <input matInput placeholder="Amount" [(ngModel)]="data.amount" name="amount">
+    </mat-form-field>
+    <br>
+    <mat-form-field>
+      <input matInput placeholder="Debit Account" [(ngModel)]="data.debit_account" name="debit_account">
+    </mat-form-field>
+    <br>
+    <mat-form-field>
+      <input matInput placeholder="Credit Account" [(ngModel)]="data.credit_account" name="credit_account">
+    </mat-form-field>
+    <br>
+    <mat-form-field>
+      <input matInput placeholder="Start Time" [(ngModel)]="data.start_time" name="start_time">
+    </mat-form-field>
+    <br>
+    <mat-form-field>
+      <input matInput placeholder="End Time" [(ngModel)]="data.end_time" name="end_time">
+    </mat-form-field>
+    <br>
+    <mat-form-field>
+      <input matInput placeholder="Sequence" [(ngModel)]="data.sequence" name="sequence">
+    </mat-form-field>
+    <br>
+    <mat-form-field>
+      <input matInput placeholder="Type" [(ngModel)]="data.type" name="type">
+    </mat-form-field>
+    <br>
+  </mat-dialog-content>
+  <mat-dialog-actions align="end">
+    <button mat-button mat-dialog-close>Cancel</button>
+    <button  (click)="updateAccount" mat-button [mat-dialog-close]="data" cdkFocusInitial>Update</button>
+  </mat-dialog-actions>
+</form>
+<!--
+<h1 mat-dialog-title>Favorite Animal</h1>
+<div mat-dialog-content>
+  My favorite animal is: kurac
+</div> -->
